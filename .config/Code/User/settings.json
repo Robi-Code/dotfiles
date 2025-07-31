@@ -1,0 +1,272 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.productIconTheme": "el-vsc-v1-icons",
+    "workbench.colorTheme": "Default Dark Modern",
+    "git.autofetch": true,
+    "editor.fontSize": 16,
+    "editor.fontFamily": "JetBrains Mono, monospace",
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "MesloLGS NF, JetBrains Mono, monospace",
+    "terminal.integrated.fontSize": 14,
+    // *** prettier
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.arrowParens": "always",
+    "prettier.jsxSingleQuote": true,
+    "prettier.printWidth": 120,
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+    "prettier.endOfLine": "auto",
+    "prettier.bracketSpacing": true,
+    "prettier.semi": true,
+    "prettier.proseWrap": "always",
+    "prettier.htmlWhitespaceSensitivity": "css",
+    // *** unused imports remove only for react, nextjs, and typescript
+    "[typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.removeUnusedImports": "always"
+        }
+    },
+    "[javascriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.removeUnusedImports": "always"
+        }
+    },
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.removeUnusedImports": "always"
+        }
+    },
+    // "[javascript]": {
+    //     "editor.codeActionsOnSave": {
+    //         "source.removeUnusedImports": "always"
+    //     }
+    // },
+    // "editor.codeActionsOnSave": {
+    //     "source.removeUnusedImports": "always"
+    // },
+    // *** prettier markdown file not formatted
+    "[markdown]": {
+        "editor.formatOnSave": false
+    },
+    // *** better comments
+    "better-comments.multilineComments": true,
+    "better-comments.highlightPlainText": true,
+    "better-comments.tags": [
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "backgroundColor": "transparent"
+        }
+    ],
+    // *** TODO highlight
+    "todohighlight.isEnable": true,
+    "todohighlight.isCaseSensitive": true,
+    "todohighlight.keywords": [
+        {
+            "text": "TODO",
+            "color": "#FF0000",
+            "backgroundColor": "rgba(255, 0, 0, 0.1)",
+            "overviewRulerColor": "rgba(255, 0, 0, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        },
+        {
+            "text": "FIXME",
+            "color": "#FFA500",
+            "backgroundColor": "rgba(255, 165, 0, 0.1)",
+            "overviewRulerColor": "rgba(255, 165, 0, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        },
+        {
+            "text": "BUG",
+            "color": "#FF4500",
+            "backgroundColor": "rgba(255, 69, 0, 0.1)",
+            "overviewRulerColor": "rgba(255, 69, 0, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        },
+        {
+            "text": "HACK",
+            "color": "#FF00FF",
+            "backgroundColor": "rgba(255, 0, 255, 0.1)",
+            "overviewRulerColor": "rgba(255, 0, 255, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        },
+        {
+            "text": "NOTE",
+            "color": "#1E90FF",
+            "backgroundColor": "rgba(30, 144, 255, 0.1)",
+            "overviewRulerColor": "rgba(30, 144, 255, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        },
+        {
+            "text": "IDEA",
+            "color": "#9400D3",
+            "backgroundColor": "rgba(148, 0, 211, 0.1)",
+            "overviewRulerColor": "rgba(148, 0, 211, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        },
+        {
+            "text": "DONT",
+            "color": "#FF00FF",
+            "backgroundColor": "rgba(255, 0, 255, 0.1)",
+            "overviewRulerColor": "rgba(255, 0, 255, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        },
+        {
+            "text": "IMPORTANT",
+            "color": "#FF0000",
+            "backgroundColor": "rgba(255, 0, 0, 0.1)",
+            "overviewRulerColor": "rgba(255, 0, 0, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        },
+        {
+            "text": "DONE",
+            "color": "#32CD32",
+            "backgroundColor": "rgba(50, 205, 50, 0.1)",
+            "overviewRulerColor": "rgba(50, 205, 50, 0.3)",
+            "isWholeLine": true,
+            "icon": "file",
+            "type": "text-and-comment",
+            "gutterIcon": true
+        }
+    ],
+    // *** eslint
+    "eslint.format.enable": true,
+    // *** error lens
+    "errorLens.statusBarMessageEnabled": true,
+    "editor.accessibilitySupport": "on",
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    },
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "github.copilot.enable": {
+        "markdown": true,
+        "scminput": true,
+        "plaintext": true
+    },
+    "accessibility.signals.chatRequestSent": {
+        "sound": "off"
+    },
+    "accessibility.signals.chatResponseReceived": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.lineHasError": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.voiceRecordingStopped": {
+        "sound": "off"
+    },
+    "accessibility.signals.voiceRecordingStarted": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "off",
+        "announcement": "off"
+    },
+    "accessibility.signals.taskCompleted": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.positionHasError": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.positionHasWarning": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.notebookCellCompleted": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasWarning": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "announcement": "off",
+        "sound": "off"
+    },
+    "gitlens.graph.minimap.additionalTypes": ["localBranches", "stashes", "pullRequests", "remoteBranches"],
+    "typescript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "typescript.suggest.completeFunctionCalls": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.env.osx": {},
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.wordWrap": "on",
+    "chat.agent.maxRequests": 500
+}

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Example extensions list
+extensions=(
+    esbenp.prettier-vscode
+    dbaeumer.vscode-eslint
+    ms-vscode.vscode-typescript-next
+    eamodio.gitlens
+)
+
+for extension in "${extensions[@]}"
+do
+    code --install-extension "$extension"
+done
