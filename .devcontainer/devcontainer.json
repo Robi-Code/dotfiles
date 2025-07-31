@@ -1,0 +1,377 @@
+{
+    "name": "Robi's Development Environment",
+    "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+
+    // Configure tool-specific properties
+    "customizations": {
+        "vscode": {
+            // Extensions to install automatically
+            "extensions": [
+                // Development Tools
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "ms-vscode.vscode-typescript-next",
+                "formulahendry.auto-rename-tag",
+                "kuscamara.remove-unused-imports",
+
+                // Git & Collaboration
+                "eamodio.gitlens",
+                "github.copilot",
+                "github.copilot-chat",
+                "github.vscode-github-actions",
+                "ms-vsliveshare.vsliveshare",
+
+                // Visual Enhancements
+                "vscode-icons-team.vscode-icons",
+                "elanandkumar.el-vsc-product-icon-theme",
+                "aaron-bond.better-comments",
+                "naumovs.color-highlight",
+                "kamikillerto.vscode-colorize",
+                "gruntfuggly.todo-tree",
+                "usernamehw.errorlens",
+                "wayou.vscode-todo-highlight",
+
+                // Productivity
+                "streetsidesoftware.code-spell-checker",
+                "wix.vscode-import-cost",
+                "sleistner.vscode-fileutils",
+                "adpyke.codesnap",
+
+                // Framework/Language Specific
+                "bradlc.vscode-tailwindcss",
+                "rodrigovallades.es7-react-js-snippets",
+                "ms-playwright.playwright",
+
+                // Development Tools
+                "ritwickdey.liveserver",
+                "wallabyjs.console-ninja",
+                "wallabyjs.quokka-vscode",
+                "wallabyjs.wallaby-vscode",
+
+                // AI/Productivity
+                "codeium.codeium",
+                "intlayer.intlayer-vs-code-extension",
+                "kilocode.kilo-code",
+
+                // System specific (conditionally useful)
+                "ms-vscode.powershell",
+                "davidanson.vscode-markdownlint"
+            ],
+
+            // Settings to apply
+            "settings": {
+                // Theme and Icons
+                "workbench.iconTheme": "vscode-icons",
+                "workbench.productIconTheme": "el-vsc-v1-icons",
+                "workbench.colorTheme": "Default Dark Modern",
+
+                // Font Configuration
+                "editor.fontSize": 16,
+                "editor.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+                "editor.fontLigatures": true,
+                "terminal.integrated.fontFamily": "JetBrains Mono, 'Courier New', monospace",
+                "terminal.integrated.fontSize": 14,
+
+                // Git Configuration
+                "git.autofetch": true,
+
+                // Editor Behavior
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": "esbenp.prettier-vscode",
+                "editor.wordWrap": "on",
+                "editor.cursorSmoothCaretAnimation": "on",
+                "editor.accessibilitySupport": "on",
+                "editor.quickSuggestions": {
+                    "comments": "on",
+                    "strings": "on"
+                },
+                "editor.suggest.snippetsPreventQuickSuggestions": true,
+
+                // Prettier Configuration
+                "prettier.singleQuote": true,
+                "prettier.trailingComma": "all",
+                "prettier.arrowParens": "always",
+                "prettier.jsxSingleQuote": true,
+                "prettier.printWidth": 120,
+                "prettier.tabWidth": 4,
+                "prettier.useTabs": false,
+                "prettier.endOfLine": "auto",
+                "prettier.bracketSpacing": true,
+                "prettier.semi": true,
+                "prettier.proseWrap": "always",
+                "prettier.htmlWhitespaceSensitivity": "css",
+
+                // Language-specific settings
+                "[typescriptreact]": {
+                    "editor.codeActionsOnSave": {
+                        "source.removeUnusedImports": "always"
+                    }
+                },
+                "[javascriptreact]": {
+                    "editor.codeActionsOnSave": {
+                        "source.removeUnusedImports": "always"
+                    }
+                },
+                "[typescript]": {
+                    "editor.codeActionsOnSave": {
+                        "source.removeUnusedImports": "always"
+                    }
+                },
+                "[markdown]": {
+                    "editor.formatOnSave": false
+                },
+
+                // TypeScript/JavaScript
+                "typescript.updateImportsOnFileMove.enabled": "always",
+                "javascript.updateImportsOnFileMove.enabled": "always",
+                "typescript.inlayHints.parameterNames.enabled": "all",
+                "javascript.inlayHints.parameterNames.enabled": "all",
+                "javascript.inlayHints.parameterTypes.enabled": true,
+                "typescript.inlayHints.parameterTypes.enabled": true,
+                "javascript.suggest.completeFunctionCalls": true,
+                "typescript.suggest.completeFunctionCalls": true,
+
+                // ESLint
+                "eslint.format.enable": true,
+
+                // Error Lens
+                "errorLens.statusBarMessageEnabled": true,
+
+                // GitHub Copilot
+                "github.copilot.enable": {
+                    "markdown": true,
+                    "scminput": true,
+                    "plaintext": true
+                },
+                "github.copilot.nextEditSuggestions.enabled": true,
+
+                // GitLens
+                "gitlens.graph.minimap.additionalTypes": ["localBranches", "stashes", "pullRequests", "remoteBranches"],
+
+                // Better Comments
+                "better-comments.multilineComments": true,
+                "better-comments.highlightPlainText": true,
+                "better-comments.tags": [
+                    {
+                        "tag": "!",
+                        "color": "#FF2D00",
+                        "strikethrough": false,
+                        "backgroundColor": "transparent"
+                    },
+                    {
+                        "tag": "?",
+                        "color": "#3498DB",
+                        "strikethrough": false,
+                        "backgroundColor": "transparent"
+                    },
+                    {
+                        "tag": "//",
+                        "color": "#474747",
+                        "strikethrough": false,
+                        "backgroundColor": "transparent"
+                    },
+                    {
+                        "tag": "todo",
+                        "color": "#FF8C00",
+                        "strikethrough": false,
+                        "backgroundColor": "transparent"
+                    },
+                    {
+                        "tag": "*",
+                        "color": "#98C379",
+                        "strikethrough": false,
+                        "backgroundColor": "transparent"
+                    }
+                ],
+
+                // TODO Highlight
+                "todohighlight.isEnable": true,
+                "todohighlight.isCaseSensitive": true,
+                "todohighlight.keywords": [
+                    {
+                        "text": "TODO",
+                        "color": "#FF0000",
+                        "backgroundColor": "rgba(255, 0, 0, 0.1)",
+                        "overviewRulerColor": "rgba(255, 0, 0, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    },
+                    {
+                        "text": "FIXME",
+                        "color": "#FFA500",
+                        "backgroundColor": "rgba(255, 165, 0, 0.1)",
+                        "overviewRulerColor": "rgba(255, 165, 0, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    },
+                    {
+                        "text": "BUG",
+                        "color": "#FF4500",
+                        "backgroundColor": "rgba(255, 69, 0, 0.1)",
+                        "overviewRulerColor": "rgba(255, 69, 0, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    },
+                    {
+                        "text": "HACK",
+                        "color": "#FF00FF",
+                        "backgroundColor": "rgba(255, 0, 255, 0.1)",
+                        "overviewRulerColor": "rgba(255, 0, 255, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    },
+                    {
+                        "text": "NOTE",
+                        "color": "#1E90FF",
+                        "backgroundColor": "rgba(30, 144, 255, 0.1)",
+                        "overviewRulerColor": "rgba(30, 144, 255, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    },
+                    {
+                        "text": "IDEA",
+                        "color": "#9400D3",
+                        "backgroundColor": "rgba(148, 0, 211, 0.1)",
+                        "overviewRulerColor": "rgba(148, 0, 211, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    },
+                    {
+                        "text": "DONT",
+                        "color": "#FF00FF",
+                        "backgroundColor": "rgba(255, 0, 255, 0.1)",
+                        "overviewRulerColor": "rgba(255, 0, 255, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    },
+                    {
+                        "text": "IMPORTANT",
+                        "color": "#FF0000",
+                        "backgroundColor": "rgba(255, 0, 0, 0.1)",
+                        "overviewRulerColor": "rgba(255, 0, 0, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    },
+                    {
+                        "text": "DONE",
+                        "color": "#32CD32",
+                        "backgroundColor": "rgba(50, 205, 50, 0.1)",
+                        "overviewRulerColor": "rgba(50, 205, 50, 0.3)",
+                        "isWholeLine": true,
+                        "icon": "file",
+                        "type": "text-and-comment",
+                        "gutterIcon": true
+                    }
+                ],
+
+                // Accessibility Settings (Sound disabled)
+                "accessibility.signals.chatRequestSent": {
+                    "sound": "off"
+                },
+                "accessibility.signals.chatResponseReceived": {
+                    "sound": "off"
+                },
+                "accessibility.signals.lineHasBreakpoint": {
+                    "sound": "off",
+                    "announcement": "off"
+                },
+                "accessibility.signals.lineHasError": {
+                    "sound": "off",
+                    "announcement": "off"
+                },
+                "accessibility.signals.voiceRecordingStopped": {
+                    "sound": "off"
+                },
+                "accessibility.signals.voiceRecordingStarted": {
+                    "sound": "off"
+                },
+                "accessibility.signals.taskFailed": {
+                    "sound": "off",
+                    "announcement": "off"
+                },
+                "accessibility.signals.taskCompleted": {
+                    "announcement": "off",
+                    "sound": "off"
+                },
+                "accessibility.signals.positionHasError": {
+                    "announcement": "off",
+                    "sound": "off"
+                },
+                "accessibility.signals.onDebugBreak": {
+                    "announcement": "off",
+                    "sound": "off"
+                },
+                "accessibility.signals.positionHasWarning": {
+                    "announcement": "off",
+                    "sound": "off"
+                },
+                "accessibility.signals.noInlayHints": {
+                    "announcement": "off",
+                    "sound": "off"
+                },
+                "accessibility.signals.notebookCellCompleted": {
+                    "announcement": "off",
+                    "sound": "off"
+                },
+                "accessibility.signals.lineHasWarning": {
+                    "announcement": "off",
+                    "sound": "off"
+                },
+                "accessibility.signals.lineHasInlineSuggestion": {
+                    "sound": "off"
+                },
+                "accessibility.signals.lineHasFoldedArea": {
+                    "announcement": "off",
+                    "sound": "off"
+                },
+
+                // Chat settings
+                "chat.agent.maxRequests": 500
+            }
+        }
+    },
+
+    // Features to add to the dev container
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        }
+    },
+
+    // Use 'postCreateCommand' to run commands after the container is created
+    "postCreateCommand": "bash .devcontainer/setup.sh",
+
+    // Configure ports that should be forwarded when the container is running
+    "forwardPorts": [3000, 8000, 8080, 5000, 4200],
+
+    // Use 'postStartCommand' to run commands after the container starts
+    "postStartCommand": "echo 'Development environment ready!'",
+
+    // Configure tool-specific properties
+    "remoteUser": "codespace"
+}
