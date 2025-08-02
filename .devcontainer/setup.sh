@@ -24,6 +24,45 @@ npm install -g npm@latest
 # Install global packages commonly used in development
 npm install -g @playwright/test typescript ts-node nodemon
 
+# Install Oh My Posh
+echo "🎨 Installing Oh My Posh..."
+curl -s https://ohmyposh.dev/install.sh | bash -s
+
+# Install PowerShell modules
+echo "📦 Installing PowerShell modules..."
+pwsh -NoProfile -Command "
+    Write-Host '📚 Installing PSReadLine...' -ForegroundColor Blue
+    Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+    
+    Write-Host '🎨 Installing Terminal-Icons...' -ForegroundColor Blue  
+    Install-Module -Name Terminal-Icons -Scope CurrentUser -Force
+    
+    Write-Host '📂 Installing z (directory jumper)...' -ForegroundColor Blue
+    Install-Module -Name z -Scope CurrentUser -Force
+    
+    Write-Host '🔧 Installing posh-git...' -ForegroundColor Blue
+    Install-Module -Name posh-git -Scope CurrentUser -Force
+    
+    Write-Host '✅ PowerShell modules installed successfully!' -ForegroundColor Green
+"
+
+# Set up PowerShell profile
+echo "⚙️  Setting up PowerShell profile..."
+PWSH_PROFILE_DIR="/home/codespace/.config/powershell"
+mkdir -p "$PWSH_PROFILE_DIR"
+
+# Copy the profile to the correct location
+cp /workspaces/$(basename "$CODESPACE_VSCODE_FOLDER")/.devcontainer/Microsoft.PowerShell_profile.ps1 "$PWSH_PROFILE_DIR/"
+
+# Copy custom Oh My Posh theme
+cp /workspaces/$(basename "$CODESPACE_VSCODE_FOLDER")/.devcontainer/robi-dev-theme.omp.json "$PWSH_PROFILE_DIR/"
+
+# Also create a symlink for the standard profile location
+mkdir -p "/home/codespace/Documents/PowerShell"
+ln -sf "$PWSH_PROFILE_DIR/Microsoft.PowerShell_profile.ps1" "/home/codespace/Documents/PowerShell/Microsoft.PowerShell_profile.ps1"
+
+echo "✅ PowerShell profile configured!"
+
 # Set up git configuration if not already set
 echo "⚙️  Setting up git configuration..."
 if [ -z "$(git config --global user.name)" ]; then
@@ -94,11 +133,17 @@ echo "🎉 Your GitHub Codespace is now configured with:"
 echo "   • All your VS Code extensions"
 echo "   • Your custom settings and keybindings"
 echo "   • JetBrains Mono font"
+echo "   • PowerShell with Oh My Posh theme"
+echo "   • PSReadLine with IntelliSense"
+echo "   • Terminal Icons and directory jumper (z)"
 echo "   • Development tools and aliases"
 echo ""
 echo "💡 Quick tips:"
 echo "   • Use 'gs' for git status"
 echo "   • Use 'nrd' for npm run dev"
 echo "   • Press Shift+Space for autocomplete (as configured)"
+echo "   • PowerShell is now your default terminal"
+echo "   • Type 'Get-Weather' for weather info"
 echo ""
+echo "🔄 To use PowerShell immediately, run: pwsh"
 echo "Happy coding! 🚀"

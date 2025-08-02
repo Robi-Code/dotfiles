@@ -49,5 +49,21 @@
         "key": "ctrl+space",
         "command": "-workbench.action.terminal.sendSequence",
         "when": "config.terminal.integrated.suggest.enabled && terminalFocus && terminalShellIntegrationEnabled && !accessibilityModeEnabled && terminalShellType == 'pwsh'"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "cmd+w",
+        "command": "-workbench.action.closeActiveEditor"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.openSettings"
+    },
+    {
+        "key": "cmd+,",
+        "command": "-workbench.action.openSettings"
     }
 ]

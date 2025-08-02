@@ -21,6 +21,8 @@ This repository contains my complete VS Code development environment configurati
 - **Git**: GitLens with enhanced features
 - **AI**: GitHub Copilot + Copilot Chat
 - **Testing**: Playwright, Wallaby.js, Quokka.js
+- **Terminal**: PowerShell with Oh My Posh theme
+- **Shell**: Custom aliases and productivity functions
 
 ## 🏗 **Project Structure**
 
@@ -34,6 +36,9 @@ dotfiles/
 │   ├── setup.sh               # Post-creation setup script
 │   └── keybindings.json       # Keybindings for Codespace
 ├── install-extensions.sh       # Extension installation script
+├── sync-settings.sh           # Bidirectional settings sync
+├── validate-environment.sh    # Environment validation
+├── POWERSHELL-SETUP.md        # PowerShell + Oh My Posh documentation
 └── README.md                  # This file
 ```
 
@@ -182,6 +187,18 @@ nrd         # npm run dev
 nrs         # npm run start
 nrb         # npm run build
 nrt         # npm run test
+```
+
+### **PowerShell Features**
+```powershell
+# PowerShell-specific commands (when using PowerShell terminal)
+Get-Weather         # Weather information
+Get-PublicIP       # Your public IP
+Edit-Profile       # Edit PowerShell profile
+Reload-Profile     # Reload PowerShell profile
+
+# Validation
+pwsh .devcontainer/Test-PowerShellEnvironment.ps1  # Test PowerShell setup
 ```
 
 ### **Extension Verification**

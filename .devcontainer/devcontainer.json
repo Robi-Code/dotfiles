@@ -72,6 +72,20 @@
                 "terminal.integrated.fontFamily": "JetBrains Mono, 'Courier New', monospace",
                 "terminal.integrated.fontSize": 14,
 
+                // Terminal Configuration - PowerShell Default
+                "terminal.integrated.defaultProfile.linux": "pwsh",
+                "terminal.integrated.profiles.linux": {
+                    "pwsh": {
+                        "path": "pwsh",
+                        "args": ["-NoLogo"],
+                        "icon": "terminal-powershell"
+                    },
+                    "bash": {
+                        "path": "bash",
+                        "icon": "terminal-bash"
+                    }
+                },
+
                 // Git Configuration
                 "git.autofetch": true,
 
@@ -359,6 +373,9 @@
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/github-cli:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/powershell:1": {
             "version": "latest"
         }
     },

@@ -268,5 +268,24 @@
     "github.copilot.nextEditSuggestions.enabled": true,
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.wordWrap": "on",
-    "chat.agent.maxRequests": 500
+    "chat.agent.maxRequests": 500,
+    // *** PowerShell terminal configuration
+    "terminal.integrated.defaultProfile.linux": "pwsh",
+    "terminal.integrated.profiles.linux": {
+        "pwsh": {
+            "path": "pwsh",
+            "args": ["-NoLogo"],
+            "icon": "terminal-powershell"
+        },
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        }
+    },
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "powershell.integratedConsole.showOnStartup": false,
+    "powershell.powerShellAdditionalExePaths": {
+        "/usr/bin/pwsh": "PowerShell Core"
+    }
 }
